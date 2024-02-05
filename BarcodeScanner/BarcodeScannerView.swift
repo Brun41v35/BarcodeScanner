@@ -15,6 +15,8 @@ struct BarcodeScannerView: View {
                 Rectangle()
                     .frame(maxWidth: .infinity,
                            maxHeight: 300)
+                Label("Scanned Barcode:",
+                      systemImage: "barcode.viewfinder")
             }
             .navigationTitle("Barcode Scanner")
         }
