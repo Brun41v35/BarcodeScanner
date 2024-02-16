@@ -24,4 +24,13 @@ final class ScannerViewController: UIViewController {
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
+
+    // MARK: - Private Methods
+
+    private func setupCaptureSession() {
+        guard let videoCaptureDevice = AVCaptureDevice.default(for: .video) else {
+            // TODO: Show Error Screen..
+            return
+        }
+    }
 }
