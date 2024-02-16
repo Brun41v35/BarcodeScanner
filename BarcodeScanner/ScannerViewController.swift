@@ -29,7 +29,16 @@ final class ScannerViewController: UIViewController {
 
     private func setupCaptureSession() {
         guard let videoCaptureDevice = AVCaptureDevice.default(for: .video) else {
-            // TODO: Show Error Screen..
+            // TODO: Handle with Error
+            return
+        }
+
+        let videoInput: AVCaptureDeviceInput
+
+        do {
+            try videoInput = AVCaptureDeviceInput(device: videoCaptureDevice)
+        } catch {
+            // TODO: Handle with Error
             return
         }
     }
