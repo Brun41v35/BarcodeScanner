@@ -41,5 +41,12 @@ final class ScannerViewController: UIViewController {
             // TODO: Handle with Error
             return
         }
+
+        if captureSession.canAddInput(videoInput) {
+            captureSession.addInput(videoInput)
+        } else {
+            // TODO: Handle with error
+            return
+        }
     }
 }
