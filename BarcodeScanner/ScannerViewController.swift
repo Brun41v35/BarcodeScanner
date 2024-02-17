@@ -48,5 +48,19 @@ final class ScannerViewController: UIViewController {
             // TODO: Handle with error
             return
         }
+
+        let metaDataOutput = AVCaptureMetadataOutput()
+        if captureSession.canAddOutput(metaDataOutput) {
+            captureSession.addOutput(metaDataOutput)
+            metaDataOutput.setMetadataObjectsDelegate(self,
+                                                      queue: DispatchQueue.main)
+            metaDataOutput.metadataObjectTypes = [.ean8, .ean13]
+        } else {
+            return
+        }
     }
 }
+
+// MARK: - Extension
+
+extension ScannerViewController: AVCaptureMetadataOutputObjectsDelegate {}
