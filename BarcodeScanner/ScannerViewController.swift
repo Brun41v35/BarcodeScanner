@@ -31,6 +31,13 @@ final class ScannerViewController: UIViewController {
         fatalError("init(coder:) has not been implemented")
     }
 
+    // MARK: - Life Cycle
+
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        setupCaptureSession()
+    }
+
     // MARK: - Private Methods
 
     private func setupCaptureSession() {
