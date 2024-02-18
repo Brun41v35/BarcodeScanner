@@ -38,6 +38,17 @@ final class ScannerViewController: UIViewController {
         setupCaptureSession()
     }
 
+    override func viewDidLayoutSubviews() {
+        super.viewDidLayoutSubviews()
+
+        guard let previewLayer = previewLayer else {
+            scannerDelegate?.didSurface(error: .invalidDeviceInput)
+            return
+        }
+
+        previewLayer.frame = view.layer.bounds
+    }
+
     // MARK: - Private Methods
 
     private func setupCaptureSession() {
