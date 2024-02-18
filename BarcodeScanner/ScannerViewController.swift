@@ -58,6 +58,9 @@ final class ScannerViewController: UIViewController {
         } else {
             return
         }
+
+        previewLayer = AVCaptureVideoPreviewLayer(session: captureSession)
+        previewLayer!.videoGravity = .resizeAspectFill
     }
 }
 
