@@ -16,7 +16,7 @@ struct ScannerView: UIViewControllerRepresentable {
     func updateUIViewController(_ uiViewController: ScannerViewController, context: Context) {}
 
     func makeCoordinator() -> Coordinator {
-        <#code#>
+        return Coordinator()
     }
 
     final class Coordinator: NSObject, ScannerDelegate {
