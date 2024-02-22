@@ -1,10 +1,3 @@
-//
-//  ContentView.swift
-//  BarcodeScanner
-//
-//  Created by Bruno Silva on 04/02/24.
-//
-
 import SwiftUI
 
 struct BarcodeScannerView: View {
