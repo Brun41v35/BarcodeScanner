@@ -1,10 +1,17 @@
 import SwiftUI
 
+struct AlertItem {
+    let title: String
+    let message: String
+    let dismissButton: Alert.Button
+}
+
 struct BarcodeScannerView: View {
 
     // MARK: - Private Properties
 
     @State private var scannedCode = ""
+    @State private var alertItem: AlertItem?
 
     // MARK: - Body
 
