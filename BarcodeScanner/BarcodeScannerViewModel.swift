@@ -11,7 +11,7 @@ final class BarcodeScannerViewModel: ObservableObject {
         return scannedCode.isEmpty ? "Not Yet Scanned" : scannedCode
     }
 
-    var statusColor: Color {
+    var statusTextColor: Color {
         return scannedCode.isEmpty ? .red : .green
     }
 }
