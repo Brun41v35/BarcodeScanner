@@ -4,15 +4,14 @@ struct BarcodeScannerView: View {
 
     // MARK: - Private Properties
 
-    @State private var scannedCode = ""
-    @State private var alertItem: AlertItem?
+    @StateObject var viewModel = BarcodeScannerViewModel()
 
     // MARK: - Body
 
     var body: some View {
         NavigationView {
             VStack {
-                ScannerView(scannedCode: $scannedCode)
+                ScannerView(scannedCode: $viewModel.scannedCode)
                     .frame(maxWidth: .infinity,
                            maxHeight: 300)
 
@@ -21,10 +20,10 @@ struct BarcodeScannerView: View {
                 Label("Scanned Barcode:",
                       systemImage: "barcode.viewfinder")
 
-                Text(scannedCode.isEmpty ? "Not Yet Scanned" : scannedCode)
+                Text(viewModel.scannedCode.isEmpty ? "Not Yet Scanned" : viewModel.scannedCode)
                     .bold()
                     .font(.largeTitle)
-                    .foregroundStyle(scannedCode.isEmpty ? .red : .green)
+                    .foregroundStyle(viewModel.scannedCode.isEmpty ? .red : .green)
                     .padding()
             }
             .navigationTitle("Barcode Scanner")
