@@ -6,4 +6,8 @@ final class BarcodeScannerViewModel: ObservableObject {
 
     @Published var scannedCode = ""
     @Published var alertItem: AlertItem?
+
+    var staticText: String {
+        scannedCode.isEmpty ? "Not Yet Scanned" : scannedCode
+    }
 }

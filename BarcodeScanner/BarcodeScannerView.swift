@@ -20,7 +20,7 @@ struct BarcodeScannerView: View {
                 Label("Scanned Barcode:",
                       systemImage: "barcode.viewfinder")
 
-                Text(viewModel.scannedCode.isEmpty ? "Not Yet Scanned" : viewModel.scannedCode)
+                Text(viewModel.staticText)
                     .bold()
                     .font(.largeTitle)
                     .foregroundStyle(viewModel.scannedCode.isEmpty ? .red : .green)
