@@ -23,7 +23,7 @@ struct BarcodeScannerView: View {
                 Text(viewModel.staticText)
                     .bold()
                     .font(.largeTitle)
-                    .foregroundStyle(viewModel.scannedCode.isEmpty ? .red : .green)
+                    .foregroundStyle(viewModel.statusColor)
                     .padding()
             }
             .navigationTitle("Barcode Scanner")

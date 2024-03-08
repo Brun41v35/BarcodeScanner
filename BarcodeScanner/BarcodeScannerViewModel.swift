@@ -10,4 +10,8 @@ final class BarcodeScannerViewModel: ObservableObject {
     var staticText: String {
         return scannedCode.isEmpty ? "Not Yet Scanned" : scannedCode
     }
+
+    var statusColor: Color {
+        return scannedCode.isEmpty ? .red : .green
+    }
 }
