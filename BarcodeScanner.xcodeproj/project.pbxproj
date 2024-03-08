@@ -59,12 +59,10 @@
 		7E68BCCE2B70809C00985576 /* BarcodeScanner */ = {
 			isa = PBXGroup;
 			children = (
+				7E82959D2B9AA72D00C298A0 /* Model */,
+				7E82959C2B9AA72800C298A0 /* Views */,
+				7E82959B2B9AA72300C298A0 /* Scenes */,
 				7E68BCCF2B70809C00985576 /* BarcodeScannerApp.swift */,
-				7EE9DECB2B716CE800AEE407 /* BarcodeScannerView.swift */,
-				7EE9DECE2B71B88900AEE407 /* ScannerViewController.swift */,
-				7E4BFF422B82A07900479B9A /* ScannerView.swift */,
-				7E8295972B9A95D300C298A0 /* Alert.swift */,
-				7E8295992B9A971E00C298A0 /* BarcodeScannerViewModel.swift */,
 				7E68BCD32B70809D00985576 /* Assets.xcassets */,
 				7E68BCD52B70809D00985576 /* Preview Content */,
 			);
@@ -77,6 +75,48 @@
 				7E68BCD62B70809D00985576 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		7E82959B2B9AA72300C298A0 /* Scenes */ = {
+			isa = PBXGroup;
+			children = (
+				7E82959E2B9AA74100C298A0 /* BarcodeScannerView */,
+			);
+			path = Scenes;
+			sourceTree = "<group>";
+		};
+		7E82959C2B9AA72800C298A0 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				7E82959F2B9AA75B00C298A0 /* UIKit Components */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		7E82959D2B9AA72D00C298A0 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				7E8295972B9A95D300C298A0 /* Alert.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		7E82959E2B9AA74100C298A0 /* BarcodeScannerView */ = {
+			isa = PBXGroup;
+			children = (
+				7E8295992B9A971E00C298A0 /* BarcodeScannerViewModel.swift */,
+				7EE9DECB2B716CE800AEE407 /* BarcodeScannerView.swift */,
+			);
+			path = BarcodeScannerView;
+			sourceTree = "<group>";
+		};
+		7E82959F2B9AA75B00C298A0 /* UIKit Components */ = {
+			isa = PBXGroup;
+			children = (
+				7EE9DECE2B71B88900AEE407 /* ScannerViewController.swift */,
+				7E4BFF422B82A07900479B9A /* ScannerView.swift */,
+			);
+			path = "UIKit Components";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
